@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using PaymentContext.Domain.ValueObjects;
 
 namespace PaymentContext.Domain.Entities
 {
@@ -7,24 +8,23 @@ namespace PaymentContext.Domain.Entities
     {
         private IList<Subscription> _subscriptions;
 
-        public Student(string firstName, string lastName, string document, string email)
+        public Student(Name name, Document document, Email email, Address address)
         {
-            FirstName = firstName;
-            LastName = lastName;
+            Name = name;
             Document = document;
             Email = email;
-            _subscriptions = new List<Subscription>();
+            address = Address;
+            _subscriptions = new List<Subscription>();            
         }
 
         // Dica: S(O)LID - Open-Close Principle
         // Principio do aberto-fechado
         // Toda modificação de propriedade precisa passar por algo que regule a regra
 
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string Document { get; private set; }
-        public string Email { get; private set; }
-        public string Address { get; private set; }
+        public Name Name { get; private set; }
+        public Document Document { get; private set; }
+        public Email Email { get; private set; }
+        public Address Address { get; private set; }
 
         // Anticorrupção de codigo, proibe que codigos fujam da regra
         public IReadOnlyCollection<Subscription> Subscriptions { get { return _subscriptions.ToArray(); } }
