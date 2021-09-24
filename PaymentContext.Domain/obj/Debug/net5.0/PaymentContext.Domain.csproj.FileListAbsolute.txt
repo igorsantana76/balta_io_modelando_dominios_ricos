@@ -1,0 +1,15 @@
+F:\dev\PaymentContext\PaymentContext.Domain\bin\Debug\net5.0\PaymentContext.Domain.deps.json
+F:\dev\PaymentContext\PaymentContext.Domain\bin\Debug\net5.0\PaymentContext.Domain.dll
+F:\dev\PaymentContext\PaymentContext.Domain\bin\Debug\net5.0\ref\PaymentContext.Domain.dll
+F:\dev\PaymentContext\PaymentContext.Domain\bin\Debug\net5.0\PaymentContext.Domain.pdb
+F:\dev\PaymentContext\PaymentContext.Domain\obj\Debug\net5.0\PaymentContext.Domain.csproj.AssemblyReference.cache
+F:\dev\PaymentContext\PaymentContext.Domain\obj\Debug\net5.0\PaymentContext.Domain.GeneratedMSBuildEditorConfig.editorconfig
+F:\dev\PaymentContext\PaymentContext.Domain\obj\Debug\net5.0\PaymentContext.Domain.AssemblyInfoInputs.cache
+F:\dev\PaymentContext\PaymentContext.Domain\obj\Debug\net5.0\PaymentContext.Domain.AssemblyInfo.cs
+F:\dev\PaymentContext\PaymentContext.Domain\obj\Debug\net5.0\PaymentContext.Domain.csproj.CoreCompileInputs.cache
+F:\dev\PaymentContext\PaymentContext.Domain\obj\Debug\net5.0\PaymentContext.Domain.dll
+F:\dev\PaymentContext\PaymentContext.Domain\obj\Debug\net5.0\ref\PaymentContext.Domain.dll
+F:\dev\PaymentContext\PaymentContext.Domain\obj\Debug\net5.0\PaymentContext.Domain.pdb
+F:\dev\PaymentContext\PaymentContext.Domain\bin\Debug\net5.0\PaymentContext.Shared.dll
+F:\dev\PaymentContext\PaymentContext.Domain\bin\Debug\net5.0\PaymentContext.Shared.pdb
+F:\dev\PaymentContext\PaymentContext.Domain\obj\Debug\net5.0\PaymentContext.Domain.csproj.CopyComplete
