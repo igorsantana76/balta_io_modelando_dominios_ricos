@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PaymentContext.Domain.Entities;
 using PaymentContext.Domain.ValueObjects;
 using PaymentContext.Domain.Enums;
+using System;
 
 namespace PaymentContext.Tests
 {
@@ -12,11 +13,15 @@ namespace PaymentContext.Tests
         public void AdicionarAssinatura()
         {
             var student = new Student(
-                new Name("Igor", "Santana"), 
+                new Name("", ""), 
                 new Document("000.000.000-00", EDocumentType.CPF), 
                 new Email("igormax2008@gmail.com"),
                 new Address("Rua Unica", "123", "Jardim Santos", "São Paulo", "SP", "Brasil", "00000-000")
-                );
+            );
+             
+            foreach(var item in student.Notifications){
+                Console.WriteLine(item.Message);                
+            }
 
             // Dica 1: (S)OLID = Single Responsability Principle
             // Problema: arquivo, classe ou metodo com mais de um objetivo
