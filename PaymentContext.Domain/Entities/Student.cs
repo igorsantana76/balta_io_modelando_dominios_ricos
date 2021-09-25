@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using PaymentContext.Domain.ValueObjects;
+using PaymentContext.Shared.Entities;
 
 namespace PaymentContext.Domain.Entities
 {
-    public class Student
+    public class Student : Entity
     {
         private IList<Subscription> _subscriptions;
 
@@ -14,7 +15,9 @@ namespace PaymentContext.Domain.Entities
             Document = document;
             Email = email;
             address = Address;
-            _subscriptions = new List<Subscription>();            
+            _subscriptions = new List<Subscription>(); 
+
+            AddNotifications(name, document, email, address);     
         }
 
         // Dica: S(O)LID - Open-Close Principle

@@ -8,7 +8,7 @@ namespace PaymentContext.Domain.ValueObjects
     falta de confiança no codigo e repetição que pode se ter ao utilizar apenas 
     tipos primitivos que podem trazer
     "São Objetos de Valor que compõem uma entidade"
-    */     
+    */
 
     public class Name : ValueObject
     {
@@ -16,10 +16,13 @@ namespace PaymentContext.Domain.ValueObjects
         {
             FirstName = firstName;
             LastName = lastName;
+
+            if (string.IsNullOrEmpty(FirstName))
+                AddNotification("Name.FirstName", "Nome Inválido");
         }
 
-        public string FirstName {get;set;}
-        public string LastName {get;set;}
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
 
     }
 }
