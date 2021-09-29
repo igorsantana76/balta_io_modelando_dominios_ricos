@@ -15,7 +15,7 @@ namespace PaymentContext.Domain.Entities
             Name = name;
             Document = document;
             Email = email;
-            address = Address;
+            Address = address;
             _subscriptions = new List<Subscription>();
 
             AddNotifications(name, document, email, address);
@@ -37,13 +37,18 @@ namespace PaymentContext.Domain.Entities
         {
             var hasSubscriptionActive = Subscriptions.Any(a => a.Active == true);
 
-            //AddNotifications(new Contract<Student>()
-            //.Requires()
-            //.IsFalse(hasSubscriptionActive, "Student.Subscriptions", "Você já tem uma assinatura ativa."));
+            AddNotifications(new Contract<Student>()
+                .Requires()
+                .IsFalse(hasSubscriptionActive, "Student.Subscriptions", "Você já tem uma assinatura ativa.")
+                .IsGreaterThan(0, subscription.Payments.Count, "Student.Subscriptions.Payments", "Esta assinatura não possui pagamentos")
+            );
+
+            //if (IsValid)
+            _subscriptions.Add(subscription);
 
             // Alternativa
-            if (hasSubscriptionActive)
-                AddNotification("Student.Subscriptions", "Você já possui uma assinatura ativa");
+            // if (hasSubscriptionActive)
+            //     AddNotification("Student.Subscriptions", "Você já possui uma assinatura ativa");
         }
     }
 }

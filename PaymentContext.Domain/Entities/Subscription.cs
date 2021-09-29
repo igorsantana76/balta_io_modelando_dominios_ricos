@@ -40,7 +40,9 @@ namespace PaymentContext.Domain.Entities
 
         public void AddPayment(Payment payment)
         {
-            AddNotifications(new Contract<Subscription>().Requires().IsGreaterThan(DateTime.Now, payment.PaidDate, "Subscriptions.Payments", "A data de pagamento está invalida"));
+            AddNotifications(new Contract<Subscription>()
+                .Requires()
+                .IsGreaterThan(DateTime.Now, payment.PaidDate, "Subscriptions.Payments", "A data de pagamento está invalida"));
 
             //if (IsValid) // Só pode adicionar se for valido
                 _payments.Add(payment);
