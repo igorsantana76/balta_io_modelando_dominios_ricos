@@ -59,7 +59,7 @@ namespace PaymentContext.Tests
             _student.AddSubscription(subscription);
 
             if (_student.Notifications.Count > 0)
-                Console.WriteLine(string.Join(", ", _student.Notifications.Select(a => a.Message).ToList()));
+                Console.WriteLine(string.Join(", ", _student.Notifications.Select(a => a.Key + " " + a.Message).ToList()));
 
             Assert.IsTrue(_student.IsValid);
         }
