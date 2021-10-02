@@ -14,6 +14,7 @@ namespace PaymentContext.Domain.Commands
 
         public string Barcode { get; set; }
         public string BoletoNumber { get; set; }
+        public string PaymentNumber { get; set; }
 
         public string Email { get; set; }
         public string TransactionCode { get; set; }
@@ -29,14 +30,15 @@ namespace PaymentContext.Domain.Commands
         public string PayerDocument { get; set; }
         public EDocumentType PayerDocumentType { get; set; }
         public string PayerAddress { get; set; }
+        public string PayerEmail { get; set; }
 
-        public string Street { get; private set; }
-        public string Number { get; private set; }
-        public string Neighborhood { get; private set; }
-        public string City { get; private set; }
-        public string State { get; private set; }
-        public string Country { get; private set; }
-        public string ZipCode { get; private set; }
+        public string Street { get;  set; }
+        public string Number { get;  set; }
+        public string Neighborhood { get;  set; }
+        public string City { get;  set; }
+        public string State { get;  set; }
+        public string Country { get;  set; }
+        public string ZipCode { get;  set; }
 
         public void Validate()
         {
